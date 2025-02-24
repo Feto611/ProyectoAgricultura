@@ -1,0 +1,142 @@
+/* login.css */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.login-title {
+    font-size: 2.5rem;
+    color: #333; /* Darker title color */
+    margin-bottom: 1.5rem;
+    animation: slideIn 0.8s ease-in-out;
+}
+
+.login-form {
+    background-color: #e6f4ea;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid black; 
+    animation: slideIn 1s ease-in-out;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: #000000; 
+    outline: none;
+    transform: scale(1.02);
+    box-shadow: 0 0 5px rgba(21, 54, 5, 0.3);
+}
+
+.password-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.password-input {
+    flex-grow: 1;
+    border-radius: 5px; 
+    padding-right: 30px; 
+    transition: border-color 0.3s ease, transform 0.3s ease; 
+}
+
+.password-input:focus {
+    border-color: #000000;
+    outline: none;
+    transform: scale(1.02);
+    box-shadow: 0 0 5px rgba(21, 54, 5, 0.3);
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px; 
+    top: 50%;
+    transform: translateY(-50%); 
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease, transform 0.3s ease;
+    background: none; 
+    border: none;
+    padding: 0; 
+}
+
+.password-input:focus + .password-toggle {
+    transform: translateY(-50%) scale(1.5);
+}
+
+.password-toggle:hover {
+    color: #1aff00;
+}
+
+.login-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #28a745; /* Green button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.forgot-password {
+    margin-top: 1rem;
+    color: #333; /* Darker link color */
+    cursor: pointer;
+    text-decoration: underline;
+    animation: slideIn 1.2s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

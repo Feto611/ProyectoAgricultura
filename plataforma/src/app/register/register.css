@@ -1,0 +1,179 @@
+/* register.css */
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.register-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    animation: slideIn 0.8s ease-in-out;
+}
+
+.register-form {
+    background-color: #e6f4ea;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    animation: slideIn 1s ease-in-out;
+    border: 2px solid black; 
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: #000000;
+    outline: none;
+    transform: scale(1.02);
+    box-shadow: 0 0 5px rgba(21, 54, 5, 0.3);
+}
+
+.password-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.password-input {
+    flex-grow: 1;
+    border-radius: 5px;
+    padding-right: 30px;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.password-input:focus {
+    border-color: #080808;
+    outline: none;
+    transform: scale(1.02);
+    box-shadow: 0 0 5px rgba(21, 54, 5, 0.3);
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease, transform 0.3s ease;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.password-toggle:hover {
+    color: #1b2903;
+}
+
+.password-toggle2 {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease, transform 0.3s ease;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.password-toggle2:hover {
+    color: #1b2903;
+}
+
+.terms-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem; /* Space below terms and conditions */
+}
+
+.form-checkbox {
+    margin-right: 0.5rem;
+    appearance: none; /* Remove default checkbox styling */
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.form-checkbox:checked {
+    border-color: #1b2903; /* Blue border when checked */
+    background-color: #1aff00; 
+}
+
+.terms-label {
+    font-weight: normal; /* Remove bold from terms label */
+    cursor: pointer;
+}
+
+.terms-label a {
+    color: #28a745; 
+    text-decoration: underline;
+}
+
+.register-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #28a745; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+    background-color:  #1aff00; /* Darker blue on hover */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

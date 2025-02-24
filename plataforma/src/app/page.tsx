@@ -107,7 +107,7 @@ export default function Home() {
       </div>
 
       {/* Carrusel */}
-      <div className="mt-4 overflow-hidden relative"> {/* Ajusta el margen superior */}
+      <div className="mt-2 overflow-hidden relative"> {/* Ajusta el margen superior */}
         <div
           className="flex transition-transform duration-500"
           style={{ transform: `translateX(-${current * 100}%)` }}
@@ -136,6 +136,28 @@ export default function Home() {
               onClick={() => setCurrent(index)}
             ></button>
           ))}
+        </div>
+      </div>
+
+      {/* Servicios */}
+      <div className="mt-8 p-4">
+        <h2 className="text-4xl font-bold text-center mb-4">Nuestros Servicios</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="border p-4 text-center">
+            <h3 className="text-2xl font-semibold mb-2">Producto 1</h3>
+            <p className="mb-4">Descripción del producto 1.</p>
+            <button className="bg-green-500 text-white py-2 px-4 rounded">Ordene Ahora</button>
+          </div>
+          <div className="border p-4 text-center">
+            <h3 className="text-2xl font-semibold mb-2">Producto 2</h3>
+            <p className="mb-4">Descripción del producto 2.</p>
+            <button className="bg-green-500 text-white py-2 px-4 rounded">Ordene Ahora</button>
+          </div>
+          <div className="border p-4 text-center">
+            <h3 className="text-2xl font-semibold mb-2">Producto 3</h3>
+            <p className="mb-4">Descripción del producto 3.</p>
+            <button className="bg-green-500 text-white py-2 px-4 rounded">Ordene Ahora</button>
+          </div>
         </div>
       </div>
     </div>

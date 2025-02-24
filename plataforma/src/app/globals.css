@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'Eurostile Extended Bold';
-  src: url('https://fonts.cdnfonts.com/css/eurostile-extended-bold');
-  font-weight: bold;
-  font-style: normal;
-}
-
 :root {
   --background: #ffffff;
   --foreground: #000000;
@@ -24,7 +17,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Eurostile Extended', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 nav {
@@ -39,5 +32,5 @@ nav {
 }
 
 .mt-8 {
-  margin-top: 4.5rem;
+  margin-top: 5rem;
 }
