@@ -54,7 +54,7 @@ export default function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prevCurrent) => (prevCurrent + 1) % images.length);
-    }, 3000); // Cambia de imagen cada 3 segundos
+    }, 3000); 
 
     return () => clearInterval(interval);
   }, [images.length]);
@@ -89,7 +89,7 @@ export default function Home() {
         <motion.div
           className="absolute text-green-700 text-6xl font-bold text-center font-serif" // Cambia el tamaño del texto y la fuente
           style={{ 
-            top: sloganTop - 250, // Ajusta este valor para mover el eslogan más arriba
+            top: sloganTop - 200, // Ajusta este valor para mover el eslogan más arriba
             right: '30%', 
             left: '30%', 
             textAlign: 'center', 

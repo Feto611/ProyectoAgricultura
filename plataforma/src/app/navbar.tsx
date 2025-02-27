@@ -12,6 +12,7 @@ export default function Navbar() {
         { name: 'Servicios', path: '/servicios' },
         { name: 'Contacto', path: '/contacto' },
         { name: 'Sobre Nosotros', path: '/about-us' },
+        {name: 'pruebas', path: '/prueba'},
     ]);
 
     return (

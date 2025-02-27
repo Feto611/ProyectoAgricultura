@@ -1,25 +1,16 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import './login.css';
 
-const Login = () => {
+export default function LoginPage (){
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
-    const router = useRouter();
 
-    interface LoginFormProps {
-        email: string;
-        password: string;
-    }
-
-    const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        console.log("Login submitted", email, password);
-    };
-
+    const router = useRouter()
+    
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
     };
@@ -32,10 +23,30 @@ const Login = () => {
         }
     };
 
+    async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+        event.preventDefault()
+     
+        const formData = new FormData(event.currentTarget)
+        const email = formData.get('email') as string
+        const password = formData.get('password') as string
+     
+        const response = await fetch('/api/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, password }),
+        })
+     
+        if (response.ok) {
+          router.push('/profile')
+        } else {
+          console.error('Login failed');
+        }
+    }
+
     return (
         <div className="login-container">
             <h2 className="login-title">Inicio de Sesión</h2>
-            <form onSubmit={handleLogin} className="login-form">
+            <form onSubmit={handleSubmit} className="login-form">
                 <div className="form-group">
                     <label htmlFor="email" className="form-label">Correo Electrónico</label>
                     <input
@@ -71,5 +82,3 @@ const Login = () => {
         </div>
     );
 };
-
-export default Login;
