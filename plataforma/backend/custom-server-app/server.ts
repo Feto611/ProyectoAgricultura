@@ -12,8 +12,8 @@ const handle = app.getRequestHandler();
 const db = mysql.createPool({
   host: process.env.DB_HOST || "localhost",
   user: process.env.DB_USER || "root",
-  password: process.env.DB_PASSWORD || "",
-  database: process.env.DB_NAME || "mi_base_de_datos",
+  password: process.env.DB_PASSWORD || "lapsusgateway",
+  database: process.env.DB_NAME || "AgriculturaDB",
 });
 
 app.prepare().then(() => {
@@ -35,7 +35,7 @@ app.prepare().then(() => {
 
   console.log(
     `> Server listening at http://localhost:${port} as ${
-      dev ? "development" : process.env.NODE_ENV
+      dev ? "En desarrollo" : process.env.NODE_ENV
     }`
   );
 });

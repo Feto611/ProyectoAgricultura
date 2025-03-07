@@ -1,0 +1,60 @@
+/* ServicioRegistro.css */
+.servicio-registro-container {
+    padding-top: 80px;     
+    padding-bottom: 50px;   
+    min-height: calc(100vh - 130px); 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  @media (max-width: 768px) {
+    .servicio-registro-container {
+      padding-top: 60px;
+      padding-bottom: 40px;
+      min-height: calc(100vh - 100px);
+    }
+  }
+  
+
+  .servicio-container-inner {
+    width: 100%;
+    max-width: 1024px;
+    padding: 0 16px;
+  }
+  
+  .servicio-modal-backdrop {
+    z-index: 1000;
+  }
+  
+  .servicio-modal-content {
+    z-index: 1001;
+  }
+ 
+  html, body {
+    scroll-behavior: smooth;
+  }
+  
+
+  .modal-open {
+    overflow: hidden;
+  }
+  
+ 
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .slide-down {
+    animation: slideDown 0.3s ease-in-out;
+  }

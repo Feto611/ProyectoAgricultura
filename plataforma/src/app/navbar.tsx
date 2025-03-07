@@ -12,19 +12,18 @@ export default function Navbar() {
         { name: 'Servicios', path: '/servicios' },
         { name: 'Contacto', path: '/contacto' },
         { name: 'Sobre Nosotros', path: '/about-us' },
-        {name: 'pruebas', path: '/prueba'},
+        {name: 'pruebas', path: '/registrarServicios'},
     ]);
 
     return (
         <nav className="bg-[#3DFF04] border-4 border-black p-4 shadow-md lg">
-            <div className="flex items-center justify-between ml-12"> {/* Contenedor para agrupar ícono y enlaces */}
-                <div className="flex items-center space-x-4"> {/* Contenedor para agrupar ícono y enlaces */}
-                    {/* Ícono visualmente más grande pero sin afectar la altura de la navbar */}
+            <div className="flex items-center justify-between ml-12"> 
+                <div className="flex items-center space-x-4"> 
                     <motion.img
                         src="/icons/logo1.svg"
                         alt="Logo"
-                        className="w-8 h-8 pr-4" // Mantén el tamaño físico original
-                        style={{ transform: 'scale(4.8)' }} // Aumenta visualmente el ícono
+                        className="w-8 h-8 pr-4" 
+                        style={{ transform: 'scale(4.8)' }}
                         transition={{ duration: 0.2 }}
                     />
                     {/* Enlaces de la navbar */}

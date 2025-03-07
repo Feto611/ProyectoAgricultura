@@ -4,7 +4,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    /* Changed from min-height: 100vh to allow for navbar */
+    padding: 80px 0; /* Add padding to account for navbar */
+    min-height: calc(100vh - 60px); /* Subtract approximate navbar height */
     font-family: 'Arial', sans-serif;
     animation: fadeIn 1s ease-in-out;
 }
@@ -24,7 +26,8 @@
     width: 100%;
     max-width: 400px;
     animation: slideIn 1s ease-in-out;
-    border: 2px solid black; 
+    border: 2px solid black;
+    margin-bottom: 2rem; /* Add margin to ensure form isn't cut off at bottom */
 }
 
 .form-group {
@@ -75,7 +78,7 @@
     box-shadow: 0 0 5px rgba(21, 54, 5, 0.3);
 }
 
-.password-toggle {
+.password-toggle, .password-toggle2 {
     position: absolute;
     right: 10px;
     top: 50%;
@@ -88,24 +91,7 @@
     padding: 0;
 }
 
-.password-toggle:hover {
-    color: #1b2903;
-}
-
-.password-toggle2 {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    color: #333;
-    transition: color 0.3s ease, transform 0.3s ease;
-    background: none;
-    border: none;
-    padding: 0;
-}
-
-.password-toggle2:hover {
+.password-toggle:hover, .password-toggle2:hover {
     color: #1b2903;
 }
 
@@ -127,24 +113,24 @@
 }
 
 .form-checkbox:checked {
-    border-color: #1b2903; /* Blue border when checked */
-    background-color: #1aff00; 
+    border-color: #1b2903;
+    background-color: #1aff00;
 }
 
 .terms-label {
-    font-weight: normal; /* Remove bold from terms label */
+    font-weight: normal;
     cursor: pointer;
 }
 
 .terms-label a {
-    color: #28a745; 
+    color: #28a745;
     text-decoration: underline;
 }
 
 .register-button {
     width: 100%;
     padding: 0.75rem;
-    background-color: #28a745; 
+    background-color: #28a745;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -154,7 +140,24 @@
 }
 
 .register-button:hover {
-    background-color:  #1aff00; /* Darker blue on hover */
+    background-color: #1aff00;
+}
+
+/* Add media query for responsive design */
+@media (max-height: 700px) {
+    .register-container {
+        padding: 40px 0;
+        min-height: auto;
+    }
+    
+    .register-form {
+        padding: 1.5rem;
+    }
+    
+    .register-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
 }
 
 /* Animations */
