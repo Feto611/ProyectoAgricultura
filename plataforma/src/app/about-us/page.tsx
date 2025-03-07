@@ -78,7 +78,7 @@ export default function AboutUs() {
         <div className="absolute inset-0">
           <motion.div 
             className="w-full h-full bg-cover bg-center"
-            style={{ backgroundImage: "url('/images/agriculture-field.jpg')" }}
+            style={{ backgroundImage: "url('/images/umbrella2.jpg')" }}
             initial={{ scale: 1.1 }}
             animate={{ scale: 1 }}
             transition={{ duration: 10, repeat: Infinity, repeatType: "reverse" }}
@@ -95,7 +95,11 @@ export default function AboutUs() {
               <div className="absolute inset-0 rounded-full border-4 border-red-600 flex items-center justify-center">
                 <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center">
                   <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xl font-bold">U</span>
+                  <img
+                  src={`/icons/logo1.svg`}
+                  alt="Umbrella Corporation logo"
+                  className="w-16 h-16"
+                  />
                   </div>
                 </div>
               </div>
@@ -291,9 +295,11 @@ export default function AboutUs() {
                 whileHover={{ y: -10 }}
               >
                 <div className="h-64 bg-gray-200 flex items-center justify-center">
-                  <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center">
-                    <span className="text-4xl font-bold text-green-600">{member.name.charAt(0)}</span>
-                  </div>
+                  <img
+                  src={`/images/Doctor${index + 1}.png`}
+                  alt={member.name}
+                  className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-800 mb-2">{member.name}</h3>

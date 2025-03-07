@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 
+
 export default function Navbar() {
     const pathname = usePathname();
     const [routes, setRoutes] = useState([
@@ -58,7 +59,7 @@ export default function Navbar() {
                 {/* Ícono de usuario y botones de login/registro */}
                 <div className="flex items-center space-x-4">
                     <motion.img
-                        src="/icons/user.svg"
+                        src="/icons/usuario.png"
                         alt="User"
                         className="w-8 h-8 cursor-pointer"
                         whileHover={{ scale: 1.1 }}
