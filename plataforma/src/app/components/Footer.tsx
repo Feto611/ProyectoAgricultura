@@ -28,13 +28,13 @@ export default function Footer() {
                     <h3 className="text-xl font-bold mb-2">Síguenos</h3>
                     <div className="flex space-x-4">
                         <a href="#" title="Facebook">
-                            <img src="/images/facebook-logo.png" alt="Facebook" className="w-8 h-8" />
+                            <img src="/images/communication.png" alt="Facebook" className="w-8 h-8" />
                         </a>
                         <a href="#" title="Twitter">
-                            <img src="/images/twitter-logo.png" alt="Twitter" className="w-8 h-8" />
+                            <img src="/images/twitter.png" alt="Twitter" className="w-8 h-8" />
                         </a>
                         <a href="#" title="Instagram">
-                            <img src="/images/instagram-logo.png" alt="Instagram" className="w-8 h-8" />
+                            <img src="/images/social.png" alt="Instagram" className="w-8 h-8" />
                         </a>
                     </div>
                 </div>

@@ -25,7 +25,6 @@ export default function Servicios() {
         { nombre: "Reparación de maquinaria", descripcion: "Servicio de reparación", precio: "$200", imagen: "/images/reparacion.jpg", stock: 20 },
         { nombre: "Asesoramiento técnico", descripcion: "Asesoramiento especializado", precio: "$100", imagen: "/images/asesoramiento.jpg", stock: 30 },
         { nombre: "Venta de repuestos", descripcion: "Repuestos originales", precio: "Varía", imagen: "/images/repuestos.jpg", stock: 50 },
-        // Agrega más items si es necesario
       ],
     },
   ];
@@ -36,7 +35,7 @@ export default function Servicios() {
 
   const handleCategoryClick = (categoria: string) => {
     setActiveCategory(activeCategory === categoria ? null : categoria);
-    setCurrentPage(1); // Reset page to 1 when category changes
+    setCurrentPage(1); 
   };
 
   const handlePageChange = (page: number) => {
